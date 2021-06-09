@@ -6,8 +6,8 @@ use VienThuong\KiotVietClient\Collection\Collection;
 use VienThuong\KiotVietClient\Exception\KiotVietException;
 use VienThuong\KiotVietClient\Utils\ExtendableTrait;
 use VienThuong\KiotVietClient\Utils\ReadDocsHelper;
-
-abstract class BaseModel
+use Illuminate\Database\Eloquent\Model;
+abstract class BaseModel extends Model
 {
     use CommonFields;
     use ExtendableTrait;
