@@ -20,6 +20,7 @@ class ProductUnit extends BaseModel
     private $conversionValue;
 
     /**
+     * @var string
      */
     private $unit;
 
