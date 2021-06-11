@@ -167,6 +167,13 @@ class Order extends BaseModel
 
     /**
      */
+    public function setSaleChannelId(?int $saleChannelId): ?int
+    {
+        return $this->saleChannelId = $saleChannelId;
+    }
+
+    /**
+     */
     public function getMakeInvoice(): ?bool
     {
         return $this->makeInvoice;
