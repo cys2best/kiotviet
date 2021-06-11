@@ -571,7 +571,7 @@ class Product extends BaseModel
     /**
      * @param  bool  $isBatchExpireControl
      */
-    public function setIsBatchExpireControl(?string $isBatchExpireControl): void
+    public function setIsBatchExpireControl(?bool $isBatchExpireControl): void
     {
         $this->isBatchExpireControl = $isBatchExpireControl;
     }
