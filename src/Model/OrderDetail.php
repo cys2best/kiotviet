@@ -10,6 +10,11 @@ class OrderDetail extends BaseModel
     private $productId;
 
     /**
+     * @var int|null
+     */
+    private $orderId;
+
+    /**
      * @var string|null
      */
     private $productCode;
@@ -135,5 +140,10 @@ class OrderDetail extends BaseModel
     public function setNote(?string $note): void
     {
         $this->note = $note;
+    }
+
+    public function getOrderId():?int
+    {
+        return $this->orderId;
     }
 }

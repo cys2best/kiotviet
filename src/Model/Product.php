@@ -150,6 +150,21 @@ class Product extends BaseModel
     private $masterCode;
 
     /**
+     * @var string
+     */
+    private $barCode;
+
+    /**
+     * @var int
+     */
+    private $type;
+
+    /**
+     * @var bool
+     */
+    private $isBatchExpireControl;
+
+    /**
      * @return string
      */
     public function getTradeMarkName(): ?string
@@ -287,7 +302,7 @@ class Product extends BaseModel
     /**
      * @return bool
      */
-    public function getIsAllowsSale(): ?bool
+    public function getAllowsSale(): ?bool
     {
         return $this->allowsSale;
     }
@@ -317,7 +332,7 @@ class Product extends BaseModel
     /**
      * @return bool
      */
-    public function getIsHasVariants(): ?bool
+    public function getHasVariants(): ?bool
     {
         return $this->hasVariants;
     }
@@ -511,5 +526,53 @@ class Product extends BaseModel
     public function setMasterCode(?string $masterCode): void
     {
         $this->masterCode = $masterCode;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBarCode(): ?string
+    {
+        return $this->barCode;
+    }
+
+    /**
+     * @param  string  $barCode
+     */
+    public function setBarCode(?string $barCode): void
+    {
+        $this->barCode = $barCode;
+    }
+
+    /**
+     * @return int
+     */
+    public function getType(): ?int
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param  string  $type
+     */
+    public function setType(?int $type): void
+    {
+        $this->type = $type;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getIsBatchExpireControl(): ?bool
+    {
+        return $this->isBatchExpireControl;
+    }
+
+    /**
+     * @param  bool  $isBatchExpireControl
+     */
+    public function setIsBatchExpireControl(?string $isBatchExpireControl): void
+    {
+        $this->isBatchExpireControl = $isBatchExpireControl;
     }
 }
